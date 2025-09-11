@@ -1,14 +1,18 @@
-import { createHashRouter, redirect, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  redirect,
+  RouterProvider,
+} from 'react-router-dom';
 
 import { homePageRoute } from '@pages/home/home-page.route';
 import { page404Route } from '@pages/page-404/page-404.route';
 import { pathKeys } from '@shared/router';
 
 export function BrowserRouter() {
-  return <RouterProvider router={hashRouter} />;
+  return <RouterProvider router={browserRouter} />;
 }
 
-const hashRouter = createHashRouter([
+const browserRouter = createBrowserRouter([
   {
     children: [
       homePageRoute,
