@@ -1,7 +1,6 @@
 import { createHashRouter, redirect, RouterProvider } from 'react-router-dom';
 
 import { homePageRoute } from '@pages/home/home-page.route';
-import { loginPageRoute } from '@pages/login/login-page.route';
 import { page404Route } from '@pages/page-404/page-404.route';
 import { pathKeys } from '@shared/router';
 
@@ -13,7 +12,6 @@ const hashRouter = createHashRouter([
   {
     children: [
       homePageRoute,
-      loginPageRoute,
       page404Route,
       {
         path: '*',
