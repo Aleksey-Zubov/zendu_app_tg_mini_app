@@ -1,12 +1,10 @@
 import { z } from 'zod';
 
+import { UserSchema } from '@shared/types';
+
 export const SessionSchema = z.object({
-  id: z.string(),
-  tgId: z.number(),
-  firstName: z.string(),
-  lastName: z.string().optional(),
-  username: z.string().optional(),
-  photoUrl: z.string().optional(),
+  accessToken: z.string(),
+  user: UserSchema,
 });
 
 export type Session = z.infer<typeof SessionSchema>;
