@@ -10,10 +10,10 @@ import { page404Route } from '@pages/page-404/page-404.route';
 import { pathKeys } from '@shared/router';
 
 export function BrowserRouter() {
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={browserRouter} />;
 }
 
-const router = createBrowserRouter([
+const browserRouter = createBrowserRouter([
   {
     children: [
       homePageRoute,
