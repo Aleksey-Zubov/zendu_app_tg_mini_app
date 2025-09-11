@@ -18,4 +18,14 @@ export class AuthService {
       },
     };
   }
+
+  static async refreshToken() {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    return {
+      data: {
+        accessToken: 'fake-access-token-refreshed',
+      },
+    };
+  }
 }

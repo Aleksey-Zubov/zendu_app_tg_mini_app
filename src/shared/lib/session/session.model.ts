@@ -11,6 +11,7 @@ type State = {
 
 type Actions = {
   setSession: (session: Session) => void;
+  refreshSessionToken: (accessToken: string) => void;
   resetSession: () => void;
 };
 
@@ -23,6 +24,14 @@ const sessionSlice: StateCreator<
   session: null,
   setSession: (session: Session) =>
     set({ session }, false, 'session/setSession'),
+  refreshSessionToken: (accessToken: string) =>
+    set(
+      (state) => ({
+        session: state.session ? { ...state.session, accessToken } : null,
+      }),
+      false,
+      'session/refreshSessionToken'
+    ),
   resetSession: () => set({ session: null }, false, 'session/resetSession'),
 });
 
