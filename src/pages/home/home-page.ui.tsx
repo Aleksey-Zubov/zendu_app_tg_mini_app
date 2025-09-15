@@ -7,7 +7,9 @@ export default function HomePage() {
     <PageLayout>
       Home Page
       <div>Session: {JSON.stringify(session)}</div>
-      <div>Window Telegram: {JSON.stringify(window.Telegram)}</div>
+      <div>
+        Telegram InitData: {JSON.stringify(window.Telegram?.WebApp?.initData)}
+      </div>
     </PageLayout>
   );
 }
