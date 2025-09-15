@@ -6,8 +6,8 @@ import svgr from 'vite-plugin-svgr';
 import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/zendu_app_tg_mini_app/' : '/',
+export default defineConfig(() => ({
+  base: '/',
   plugins: [
     react(),
     svgr({ include: '**/*.svg' }),
